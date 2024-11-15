@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-buttons">
+            <button onclick="scrollToSection('home')">Home</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="section">
+            <h1>Welcome to My Portfolio</h1>
+            <!-- Add your home content here -->
+        </section>
+
+        <section id="projects" class="section">
+            <div class="project-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Project 1</h3>
+                    </div>
+                    <button class="close-button">Close</button>
+                    <div class="card-content">
+                        <h1>Project 1 Details</h1>
+                        <!-- Placeholder content will be inserted here -->
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <button class="close-button">Close</button>
+                    <div class="card-content">
+                        <h1>Project 2 Details</h1>
+                        <!-- Placeholder content -->
+                        <p>Lorem ipsum dolor sit amet...</p>
+                        <p>Consectetur adipiscing elit...</p>
+                        <!-- Repeat these paragraphs many times for scrollable content -->
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <button class="close-button">Close</button>
+                    <div class="card-content">
+                        <h1>Project 3 Details</h1>
+                        <!-- Placeholder content -->
+                        <p>Lorem ipsum dolor sit amet...</p>
+                        <p>Consectetur adipiscing elit...</p>
+                        <!-- Repeat these paragraphs many times for scrollable content -->
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Project 4</h3>
+                    <button class="close-button">Close</button>
+                    <div class="card-content">
+                        <h1>Project 4 Details</h1>
+                        <!-- Placeholder content -->
+                        <p>Lorem ipsum dolor sit amet...</p>
+                        <p>Consectetur adipiscing elit...</p>
+                        <!-- Repeat these paragraphs many times for scrollable content -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="contact-box"></div>
+            <div class="contact-content">
+                <h2>Contact Me</h2>
+                <!-- Add your contact content here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 

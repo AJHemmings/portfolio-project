@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333; /* Dark grey background */
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+main {
+    position: relative;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Projects Section */
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 200vh; /* Give more scroll room for animations */
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 8px;
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    right: -350px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.card.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: none !important;
+    z-index: 1000;
+    margin: 0;
+    border-radius: 0;
+    right: auto;
+    opacity: 1;
+}
+
+.card-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: none;
+    padding: 2rem;
+}
+
+.expanded .card-content {
+    display: block;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    padding: 0.5rem 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
+
+.expanded .close-button {
+    display: block;
+}
+
+/* Add styles for the card header */
+.card-header {
+    padding: 1rem;
+}
+
+.expanded .card-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1001;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Prevent body scroll when card is expanded */
+body.card-expanded {
+    overflow: hidden;
+}
+
+/* Contact Section */
+.contact-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contact-box {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #666; /* Lighter grey */
+    transform-origin: right;
+    transition: transform 1s ease-out;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    transition-delay: 1s; /* Delay text appearance */
+}
+
+.contact-box.visible {
+    transform: translateX(-100%);
+}
+
+.contact-content.visible {
+    opacity: 1;
+} 
