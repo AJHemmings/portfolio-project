@@ -155,7 +155,7 @@ body.card-expanded {
     z-index: 1;
     opacity: 0;
     transition: opacity 0.5s ease-out;
-    transition-delay: 1s; /* Delay text appearance */
+    transition-delay: 0.5s; /* Delay text appearance */
 }
 
 .contact-box.visible {
@@ -163,5 +163,26 @@ body.card-expanded {
 }
 
 .contact-content.visible {
+    opacity: 1;
+}
+
+/* Social Section */
+.social-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #444; /* Slightly different shade from other sections */
+}
+
+.social-content {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    transition-delay: 0.5s;
+}
+
+.social-content.visible {
     opacity: 1;
 } 
